@@ -1,15 +1,13 @@
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Features from "@/components/Features";
-import Dashboard from "@/components/Dashboard";
+import OrganicHeader from "@/components/OrganicHeader";
+import OrganicHero from "@/components/OrganicHero";
+import OrganicFeatures from "@/components/OrganicFeatures";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <Hero />
-      <Features />
-      <Dashboard />
+    <div className="min-h-screen bg-background overflow-x-hidden">
+      <OrganicHeader />
+      <OrganicHero />
+      <OrganicFeatures />
     </div>
   );
 };
