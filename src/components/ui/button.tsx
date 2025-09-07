@@ -9,12 +9,15 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-soft",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        hero: "bg-gradient-to-r from-healing-green to-warm-orange text-white hover:shadow-elevation transform hover:scale-105 transition-all duration-300",
+        ayurvedic: "bg-golden-wisdom text-earth-brown hover:bg-golden-wisdom/90 shadow-soft",
+        wellness: "bg-gradient-to-r from-calm-blue to-healing-green text-white hover:shadow-elevation",
       },
       size: {
         default: "h-10 px-4 py-2",

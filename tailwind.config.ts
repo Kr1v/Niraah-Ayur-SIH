@@ -47,6 +47,12 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Ayurvedic color palette
+        "healing-green": "hsl(var(--healing-green))",
+        "earth-brown": "hsl(var(--earth-brown))",
+        "golden-wisdom": "hsl(var(--golden-wisdom))",
+        "warm-orange": "hsl(var(--warm-orange))",
+        "calm-blue": "hsl(var(--calm-blue))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
