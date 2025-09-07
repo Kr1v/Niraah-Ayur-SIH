@@ -8,55 +8,61 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Niraah Ayurvedic Design System */
-    --background: 45 15% 97%;
-    --foreground: 20 15% 15%;
+    /* Niraah Modern Ayurvedic Design System */
+    --background: 50 20% 98%;
+    --foreground: 230 15% 15%;
 
-    --card: 45 20% 98%;
-    --card-foreground: 20 15% 15%;
+    --card: 50 30% 99%;
+    --card-foreground: 230 15% 15%;
 
-    --popover: 45 20% 98%;
-    --popover-foreground: 20 15% 15%;
+    --popover: 50 30% 99%;
+    --popover-foreground: 230 15% 15%;
 
-    /* Deep forest green as primary - represents nature and healing */
-    --primary: 140 60% 25%;
-    --primary-foreground: 45 20% 98%;
+    /* Vibrant teal primary - represents healing waters and growth */
+    --primary: 180 85% 35%;
+    --primary-foreground: 50 20% 98%;
 
-    /* Warm earth tone secondary */
-    --secondary: 35 40% 88%;
-    --secondary-foreground: 20 15% 15%;
+    /* Soft lavender secondary - calming and modern */
+    --secondary: 260 30% 92%;
+    --secondary-foreground: 230 15% 15%;
 
-    --muted: 45 15% 92%;
-    --muted-foreground: 20 8% 45%;
+    --muted: 50 15% 94%;
+    --muted-foreground: 230 8% 50%;
 
-    /* Golden accent - represents wisdom and energy */
-    --accent: 45 85% 75%;
-    --accent-foreground: 20 15% 15%;
+    /* Warm coral accent - energy and vitality */
+    --accent: 15 85% 75%;
+    --accent-foreground: 230 15% 15%;
 
     --destructive: 0 75% 55%;
-    --destructive-foreground: 45 20% 98%;
+    --destructive-foreground: 50 20% 98%;
 
-    --border: 45 20% 88%;
-    --input: 45 20% 95%;
-    --ring: 140 60% 25%;
+    --border: 50 20% 90%;
+    --input: 50 20% 96%;
+    --ring: 180 85% 35%;
 
-    /* Ayurvedic-inspired colors */
-    --healing-green: 140 60% 25%;
-    --earth-brown: 25 35% 35%;
-    --golden-wisdom: 45 85% 65%;
-    --warm-orange: 25 85% 65%;
-    --calm-blue: 200 40% 65%;
+    /* Modern Ayurvedic Color Palette */
+    --vibrant-teal: 180 85% 35%;
+    --deep-teal: 180 85% 25%;
+    --soft-coral: 15 85% 70%;
+    --warm-coral: 15 85% 65%;
+    --sage-green: 120 30% 55%;
+    --lavender: 260 40% 75%;
+    --cream: 45 40% 95%;
+    --sunset-orange: 30 90% 70%;
     
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--healing-green)), hsl(var(--warm-orange)));
-    --gradient-card: linear-gradient(180deg, hsl(var(--background)), hsl(var(--secondary)));
-    --gradient-accent: linear-gradient(90deg, hsl(var(--golden-wisdom)), hsl(var(--warm-orange)));
+    /* Enhanced Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--vibrant-teal)), hsl(var(--soft-coral)));
+    --gradient-wellness: linear-gradient(120deg, hsl(var(--sage-green)), hsl(var(--vibrant-teal)));
+    --gradient-card: linear-gradient(180deg, hsl(var(--background)), hsl(var(--cream)));
+    --gradient-accent: linear-gradient(90deg, hsl(var(--lavender)), hsl(var(--soft-coral)));
+    --gradient-sunset: linear-gradient(135deg, hsl(var(--sunset-orange)), hsl(var(--warm-coral)));
     
-    /* Shadows */
-    --shadow-soft: 0 4px 20px -8px hsl(var(--healing-green) / 0.2);
-    --shadow-elevation: 0 8px 32px -12px hsl(var(--earth-brown) / 0.15);
+    /* Modern Shadows */
+    --shadow-soft: 0 4px 20px -8px hsl(var(--vibrant-teal) / 0.25);
+    --shadow-elevation: 0 8px 32px -12px hsl(var(--deep-teal) / 0.2);
+    --shadow-glow: 0 0 40px hsl(var(--soft-coral) / 0.3);
     
-    /* Animations */
+    /* Smooth Animations */
     --transition-gentle: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 

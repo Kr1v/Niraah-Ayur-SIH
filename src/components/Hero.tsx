@@ -17,14 +17,14 @@ const Hero = () => {
           {/* Content */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <div className="flex items-center gap-2 text-healing-green">
+              <div className="flex items-center gap-2 text-vibrant-teal">
                 <Leaf className="w-5 h-5" />
                 <span className="text-sm font-medium uppercase tracking-wider">Ayurvedic Nutrition Science</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">
                 Modernizing{" "}
-                <span className="bg-gradient-to-r from-healing-green to-warm-orange bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-vibrant-teal to-soft-coral bg-clip-text text-transparent">
                   Ayurvedic
                 </span>{" "}
                 Diet Planning
@@ -39,26 +39,26 @@ const Hero = () => {
             {/* Features Grid */}
             <div className="grid grid-cols-2 gap-4">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-healing-green/10 rounded-lg flex items-center justify-center">
-                  <Users className="w-5 h-5 text-healing-green" />
+                <div className="w-10 h-10 bg-vibrant-teal/10 rounded-lg flex items-center justify-center">
+                  <Users className="w-5 h-5 text-vibrant-teal" />
                 </div>
                 <span className="text-sm font-medium">Patient Management</span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-warm-orange/10 rounded-lg flex items-center justify-center">
-                  <Brain className="w-5 h-5 text-warm-orange" />
+                <div className="w-10 h-10 bg-soft-coral/10 rounded-lg flex items-center justify-center">
+                  <Brain className="w-5 h-5 text-warm-coral" />
                 </div>
                 <span className="text-sm font-medium">AI-Powered Plans</span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-golden-wisdom/10 rounded-lg flex items-center justify-center">
-                  <Leaf className="w-5 h-5 text-earth-brown" />
+                <div className="w-10 h-10 bg-lavender/10 rounded-lg flex items-center justify-center">
+                  <Leaf className="w-5 h-5 text-deep-teal" />
                 </div>
                 <span className="text-sm font-medium">8,000+ Foods</span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-calm-blue/10 rounded-lg flex items-center justify-center">
-                  <Shield className="w-5 h-5 text-calm-blue" />
+                <div className="w-10 h-10 bg-sage-green/10 rounded-lg flex items-center justify-center">
+                  <Shield className="w-5 h-5 text-sage-green" />
                 </div>
                 <span className="text-sm font-medium">HIPAA Compliant</span>
               </div>
@@ -78,17 +78,17 @@ const Hero = () => {
             {/* Social Proof */}
             <div className="flex items-center gap-6 pt-4">
               <div className="text-center">
-                <div className="text-2xl font-bold text-healing-green">500+</div>
+                <div className="text-2xl font-bold text-vibrant-teal">500+</div>
                 <div className="text-sm text-muted-foreground">Practitioners</div>
               </div>
               <div className="w-px h-12 bg-border"></div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-warm-orange">10K+</div>
+                <div className="text-2xl font-bold text-soft-coral">10K+</div>
                 <div className="text-sm text-muted-foreground">Patients Served</div>
               </div>
               <div className="w-px h-12 bg-border"></div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-golden-wisdom">98%</div>
+                <div className="text-2xl font-bold text-lavender">98%</div>
                 <div className="text-sm text-muted-foreground">Satisfaction</div>
               </div>
             </div>
@@ -97,8 +97,8 @@ const Hero = () => {
           {/* Visual Element */}
           <div className="relative lg:block hidden">
             <div className="relative">
-              <div className="w-full h-96 bg-gradient-to-br from-healing-green/10 to-warm-orange/10 rounded-2xl overflow-hidden shadow-elevation">
-                <img 
+              <div className="w-full h-96 bg-gradient-to-br from-vibrant-teal/10 to-soft-coral/10 rounded-2xl overflow-hidden shadow-elevation">
+                <img
                   src={heroImage} 
                   alt="Ayurvedic herbs and healthy foods" 
                   className="w-full h-full object-cover"
@@ -108,7 +108,7 @@ const Hero = () => {
               {/* Floating Cards */}
               <div className="absolute -top-4 -right-4 bg-card p-4 rounded-xl shadow-soft border border-border">
                 <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 bg-healing-green rounded-full flex items-center justify-center">
+                  <div className="w-8 h-8 bg-vibrant-teal rounded-full flex items-center justify-center">
                     <Leaf className="w-4 h-4 text-white" />
                   </div>
                   <div>

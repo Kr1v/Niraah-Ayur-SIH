@@ -15,9 +15,10 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-gradient-to-r from-healing-green to-warm-orange text-white hover:shadow-elevation transform hover:scale-105 transition-all duration-300",
-        ayurvedic: "bg-golden-wisdom text-earth-brown hover:bg-golden-wisdom/90 shadow-soft",
-        wellness: "bg-gradient-to-r from-calm-blue to-healing-green text-white hover:shadow-elevation",
+        hero: "bg-gradient-to-r from-vibrant-teal to-soft-coral text-white hover:shadow-elevation transform hover:scale-105 transition-all duration-300",
+        ayurvedic: "bg-lavender text-deep-teal hover:bg-lavender/90 shadow-soft",
+        wellness: "bg-gradient-to-r from-sage-green to-vibrant-teal text-white hover:shadow-elevation",
+        coral: "bg-gradient-to-r from-warm-coral to-sunset-orange text-white hover:shadow-glow",
       },
       size: {
         default: "h-10 px-4 py-2",

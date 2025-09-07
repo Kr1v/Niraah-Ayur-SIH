@@ -47,12 +47,15 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Ayurvedic color palette
-        "healing-green": "hsl(var(--healing-green))",
-        "earth-brown": "hsl(var(--earth-brown))",
-        "golden-wisdom": "hsl(var(--golden-wisdom))",
-        "warm-orange": "hsl(var(--warm-orange))",
-        "calm-blue": "hsl(var(--calm-blue))",
+        // Modern Ayurvedic color palette
+        "vibrant-teal": "hsl(var(--vibrant-teal))",
+        "deep-teal": "hsl(var(--deep-teal))",
+        "soft-coral": "hsl(var(--soft-coral))",
+        "warm-coral": "hsl(var(--warm-coral))",
+        "sage-green": "hsl(var(--sage-green))",
+        "lavender": "hsl(var(--lavender))",
+        "cream": "hsl(var(--cream))",
+        "sunset-orange": "hsl(var(--sunset-orange))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
