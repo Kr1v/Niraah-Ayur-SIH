@@ -137,7 +137,18 @@ All colors MUST be HSL.
     --shadow-glow: 0 0 40px hsl(var(--soft-coral) / 0.4);
   }
 }
+@keyframes flow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* moves up */
+  }
+}
 
+.animate-flow {
+  animation: flow 3s ease-in-out infinite;
+}
 @layer base {
   * {
     @apply border-border transition-colors;
@@ -182,3 +193,4 @@ All colors MUST be HSL.
     @apply bg-primary;
   }
 }
+
