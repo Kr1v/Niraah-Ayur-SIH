@@ -17,13 +17,13 @@ const OrganicHeader = () => {
             <div className="absolute -top-1 -right-1 w-3 h-3 bg-sunset-orange rounded-full animate-glow"></div>
           </div>
           <span className="text-xl font-space font-bold bg-gradient-to-r from-vibrant-teal to-soft-coral bg-clip-text text-transparent">
-            Niraah
+            Ahaar
           </span>
         </div>
 
         {/* Floating Navigation */}
         <nav className="hidden md:flex items-center gap-1 bg-white/5 dark:bg-black/20 backdrop-blur-xl rounded-full px-6 py-2 border border-white/10">
-          {['Features', 'About', 'Contact'].map((item) => (
+          {["Features", "About", "Contact"].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
@@ -39,12 +39,16 @@ const OrganicHeader = () => {
         {/* Action Buttons */}
         <div className="flex items-center gap-2">
           <ThemeToggle />
-          <Button variant="ghost" className="hidden md:inline-flex font-space" onClick={() => navigate("/auth")}>
+          <Button
+            variant="ghost"
+            className="hidden md:inline-flex font-space"
+            onClick={() => navigate("/auth")}
+          >
             Login
           </Button>
-          <Button 
-            variant="hero" 
-            size="sm" 
+          <Button
+            variant="hero"
+            size="sm"
             className="relative overflow-hidden group font-space"
             onClick={() => navigate("/auth")}
           >
@@ -56,7 +60,7 @@ const OrganicHeader = () => {
           </Button>
         </div>
       </div>
-      
+
       {/* Floating particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(5)].map((_, i) => (
