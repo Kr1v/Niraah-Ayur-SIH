@@ -1,11 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Leaf, Users, Brain, Shield, Sparkles } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import heroImage from "@/assets/hero-ayurveda.jpg";
 
 const OrganicHero = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden ">
-      <button className="fixed bottom-2 right-7 glass dark:glass-dark p-4 rounded-2xl flex items-center gap-2 hover:scale-105 transition-transform z-30 animate-flow">
+      <button 
+        onClick={() => navigate("/ai-chat")}
+        className="fixed bottom-2 right-7 glass dark:glass-dark p-4 rounded-2xl flex items-center gap-2 hover:scale-105 transition-transform z-30 animate-flow cursor-pointer"
+      >
         <div className="w-8 h-8 bg-vibrant-teal rounded-full flex items-center justify-center">
           <Leaf className="w-4 h-4 text-white" />
         </div>
@@ -76,15 +82,16 @@ const OrganicHero = () => {
             {/* Floating Feature Cards */}
             <div className="grid grid-cols-2 gap-4">
               {[
-                { icon: Users, label: "Smart Patients", color: "vibrant-teal" },
-                { icon: Brain, label: "AI Insights", color: "soft-coral" },
-                { icon: Leaf, label: "8K+ Foods", color: "sage-green" },
-                { icon: Shield, label: "Secure", color: "lavender" },
+                { icon: Users, label: "Smart Patients", color: "vibrant-teal", route: "/personalized" },
+                { icon: Brain, label: "AI Insights", color: "soft-coral", route: "/ai-insights" },
+                { icon: Leaf, label: "8K+ Foods", color: "sage-green", route: "/foods" },
+                { icon: Shield, label: "Secure", color: "lavender", route: "/security" },
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="glass dark:glass-dark p-4 rounded-2xl group hover:scale-105 transition-all duration-300 relative overflow-hidden"
+                  className="glass dark:glass-dark p-4 rounded-2xl group hover:scale-105 transition-all duration-300 relative overflow-hidden cursor-pointer"
                   style={{ animationDelay: `${index * 0.1}s` }}
+                  onClick={() => navigate(item.route)}
                 >
                   <div className="flex items-center gap-3">
                     <div
@@ -107,6 +114,7 @@ const OrganicHero = () => {
                 variant="hero"
                 size="lg"
                 className="group font-space relative overflow-hidden"
+                onClick={() => navigate("/auth")}
               >
                 <span className="relative z-10 flex items-center gap-2">
                   Start Your Journey

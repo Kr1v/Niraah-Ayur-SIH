@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Leaf, Menu, Sparkles } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const OrganicHeader = () => {
+  const navigate = useNavigate();
   return (
     <header className="fixed top-0 w-full z-50 glass dark:glass-dark border-b border-white/10">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
@@ -21,15 +23,15 @@ const OrganicHeader = () => {
 
         {/* Floating Navigation */}
         <nav className="hidden md:flex items-center gap-1 bg-white/5 dark:bg-black/20 backdrop-blur-xl rounded-full px-6 py-2 border border-white/10">
-          {['Features', 'About', 'Contact'].map((item, index) => (
+          {['Features', 'About', 'Contact'].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="relative px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-all duration-300 group"
+              className="relative px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 group"
             >
               {item}
-              <div className="absolute inset-0 bg-gradient-to-r from-vibrant-teal/20 to-soft-coral/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-blob"></div>
-              <Sparkles className="absolute top-1 right-1 w-2 h-2 text-soft-coral opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              {/* Subtle hover highlight without janky morph/float animations */}
+              <div className="pointer-events-none absolute inset-0 rounded-full bg-gradient-to-r from-vibrant-teal/15 to-soft-coral/15 opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100 transition-[opacity,transform] duration-200 ease-out"></div>
             </a>
           ))}
         </nav>
@@ -37,13 +39,14 @@ const OrganicHeader = () => {
         {/* Action Buttons */}
         <div className="flex items-center gap-2">
           <ThemeToggle />
-          <Button variant="ghost" className="hidden md:inline-flex font-space">
+          <Button variant="ghost" className="hidden md:inline-flex font-space" onClick={() => navigate("/auth")}>
             Login
           </Button>
           <Button 
             variant="hero" 
             size="sm" 
             className="relative overflow-hidden group font-space"
+            onClick={() => navigate("/auth")}
           >
             <span className="relative z-10">Get Started</span>
             <div className="absolute inset-0 bg-gradient-to-r from-soft-coral to-sunset-orange opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
