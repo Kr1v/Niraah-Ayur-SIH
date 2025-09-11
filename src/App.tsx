@@ -14,7 +14,8 @@ import Personalized from "./pages/Personalized";
 import Test from "./pages/Test";
 import NotFound from "./pages/NotFound";
 import Dashboard from "./components/Dashboard";
-import NewPatient from "./pages/newPatient";
+
+import PatientForm from "./pages/newPatient";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -34,7 +35,7 @@ const App = () => (
             <Route path="/security" element={<Security />} />
             <Route path="/personalized" element={<Personalized />} />
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/newPatient" element={<NewPatient />} />
+            <Route path="/newPatient" element={<PatientForm />} />
 
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
