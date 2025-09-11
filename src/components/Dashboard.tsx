@@ -1,23 +1,53 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Users, 
-  Calendar, 
-  TrendingUp, 
-  FileText, 
+import {
+  Users,
+  Calendar,
   Plus,
   Search,
   Filter,
   Bell,
-  MoreVertical
+  MoreVertical,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import React from "react";
 
-const Dashboard = () => {
+const Dashboard: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleClick = (path: string): void => {
+    navigate(path);
+  };
+
   const recentPatients = [
-    { name: "Priya Sharma", age: 34, dosha: "Pitta", lastVisit: "2 days ago", status: "Active" },
-    { name: "Rajesh Kumar", age: 42, dosha: "Vata", lastVisit: "1 week ago", status: "Follow-up" },
-    { name: "Anita Desai", age: 29, dosha: "Kapha", lastVisit: "3 days ago", status: "New Plan" },
+    {
+      name: "Ajay Kumar Singh",
+      age: 24,
+      dosha: "Pitta",
+      lastVisit: "2 days ago",
+      status: "Active",
+    },
+    {
+      name: "Vishaka",
+      age: 62,
+      dosha: "Vata",
+      lastVisit: "1 week ago",
+      status: "Follow-up",
+    },
+    {
+      name: "Priyanka Rathore",
+      age: 37,
+      dosha: "Kapha",
+      lastVisit: "3 days ago",
+      status: "New Plan",
+    },
   ];
 
   const todayAppointments = [
@@ -39,12 +69,12 @@ const Dashboard = () => {
               Manage your Ayurvedic practice with intelligent insights
             </p>
           </div>
-          
+
           <div className="flex items-center gap-4">
             <Button variant="outline" size="icon">
               <Bell className="w-4 h-4" />
             </Button>
-            <Button variant="hero">
+            <Button variant="hero" onClick={() => handleClick("/NewPatient")}>
               <Plus className="w-4 h-4" />
               New Patient
             </Button>
@@ -86,40 +116,6 @@ const Dashboard = () => {
               </p>
             </CardContent>
           </Card>
-
-          <Card className="bg-gradient-to-br from-golden-wisdom/5 to-golden-wisdom/10 border-golden-wisdom/20">
-            <CardHeader className="pb-2">
-              <div className="flex items-center justify-between">
-                <CardTitle className="text-sm font-medium text-muted-foreground">
-                  Success Rate
-                </CardTitle>
-                <TrendingUp className="w-4 h-4 text-earth-brown" />
-              </div>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold text-earth-brown">94%</div>
-              <p className="text-xs text-muted-foreground">
-                Patient satisfaction
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-gradient-to-br from-calm-blue/5 to-calm-blue/10 border-calm-blue/20">
-            <CardHeader className="pb-2">
-              <div className="flex items-center justify-between">
-                <CardTitle className="text-sm font-medium text-muted-foreground">
-                  Diet Plans
-                </CardTitle>
-                <FileText className="w-4 h-4 text-calm-blue" />
-              </div>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold text-calm-blue">156</div>
-              <p className="text-xs text-muted-foreground">
-                Active prescriptions
-              </p>
-            </CardContent>
-          </Card>
         </div>
 
         {/* Main Content */}
@@ -148,26 +144,37 @@ const Dashboard = () => {
               <CardContent className="p-0">
                 <div className="divide-y divide-border">
                   {recentPatients.map((patient, index) => (
-                    <div key={index} className="p-6 hover:bg-muted/50 transition-colors">
+                    <div
+                      key={index}
+                      className="p-6 hover:bg-muted/50 transition-colors"
+                    >
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-4">
                           <div className="w-10 h-10 bg-gradient-to-br from-healing-green to-warm-orange rounded-full flex items-center justify-center text-white font-medium">
-                            {patient.name.split(' ').map(n => n[0]).join('')}
+                            {patient.name
+                              .split(" ")
+                              .map((n) => n[0])
+                              .join("")}
                           </div>
                           <div>
-                            <div className="font-medium text-foreground">{patient.name}</div>
+                            <div className="font-medium text-foreground">
+                              {patient.name}
+                            </div>
                             <div className="text-sm text-muted-foreground">
-                              Age {patient.age} • {patient.dosha} Dosha • {patient.lastVisit}
+                              Age {patient.age} • {patient.dosha} Dosha •{" "}
+                              {patient.lastVisit}
                             </div>
                           </div>
                         </div>
                         <div className="flex items-center gap-3">
-                          <Badge 
-                            variant="secondary" 
+                          <Badge
+                            variant="secondary"
                             className={
-                              patient.status === "Active" ? "bg-healing-green/10 text-healing-green" :
-                              patient.status === "Follow-up" ? "bg-warm-orange/10 text-warm-orange" :
-                              "bg-golden-wisdom/10 text-earth-brown"
+                              patient.status === "Active"
+                                ? "bg-healing-green/10 text-healing-green"
+                                : patient.status === "Follow-up"
+                                ? "bg-warm-orange/10 text-warm-orange"
+                                : "bg-golden-wisdom/10 text-earth-brown"
                             }
                           >
                             {patient.status}
@@ -195,16 +202,25 @@ const Dashboard = () => {
               </CardHeader>
               <CardContent className="space-y-4">
                 {todayAppointments.map((appointment, index) => (
-                  <div key={index} className="flex items-center gap-3 p-3 rounded-lg bg-muted/30">
+                  <div
+                    key={index}
+                    className="flex items-center gap-3 p-3 rounded-lg bg-muted/30"
+                  >
                     <div className="w-2 h-12 bg-gradient-to-b from-healing-green to-warm-orange rounded-full"></div>
                     <div className="flex-1">
-                      <div className="font-medium text-foreground">{appointment.time}</div>
-                      <div className="text-sm text-muted-foreground">{appointment.patient}</div>
-                      <div className="text-xs text-muted-foreground">{appointment.type}</div>
+                      <div className="font-medium text-foreground">
+                        {appointment.time}
+                      </div>
+                      <div className="text-sm text-muted-foreground">
+                        {appointment.patient}
+                      </div>
+                      <div className="text-xs text-muted-foreground">
+                        {appointment.type}
+                      </div>
                     </div>
                   </div>
                 ))}
-                
+
                 <Button variant="outline" className="w-full mt-4">
                   View Full Calendar
                 </Button>

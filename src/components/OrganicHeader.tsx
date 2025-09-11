@@ -17,7 +17,7 @@ const OrganicHeader = () => {
             <div className="absolute -top-1 -right-1 w-3 h-3 bg-sunset-orange rounded-full animate-glow"></div>
           </div>
           <span className="text-xl font-space font-bold bg-gradient-to-r from-vibrant-teal to-soft-coral bg-clip-text text-transparent">
-            Ahaar
+            Aahaar
           </span>
         </div>
 
